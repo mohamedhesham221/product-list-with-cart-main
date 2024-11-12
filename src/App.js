@@ -10,7 +10,7 @@ function App() {
 
 //Component Logic ...
   return (
-    <div className="App">
+    <main className="App">
       <myContext.Provider value={{cartItems, setCartItems,deletedItem, setDeletedItem}}>
       <section className="desserts">
         <h1>Desserts</h1>
@@ -20,7 +20,7 @@ function App() {
         <Cart />
       </aside>
       </myContext.Provider> 
-    </div>
+    </main>
   );
 }
 
