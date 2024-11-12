@@ -1,0 +1,121 @@
+.cart { 
+	section {
+		width: 100%;
+		height: max-content;
+		text-align: center;
+		background-color: #fff;
+		border-radius: 10px;
+		padding: 10px;
+		h2 {
+			color: $red;
+			text-align: left;
+			margin-bottom: 50px;
+		}
+		.empty-cart-message {
+			color: $rose400;
+			font-weight: 600;
+		}
+		.list-items {
+			list-style: none;
+			text-align: left;
+			margin-top: 15px;
+			li {
+				position: relative;
+				border-bottom: 1px solid $rose100;
+				margin-bottom: 20px;
+				padding-bottom: 10px;
+			}
+			.cart-item_name {
+				display: block;
+				margin-bottom: 10px;
+				color: $rose500;
+				font-weight: 600;
+			}
+			.price-quantity-wrapper {
+				display: inline-block;
+				.cart-item_quantity {
+					color: $red;
+					font-weight: 800;
+				}
+				.cart-item_price {
+					margin-left: 20px;
+					.cart-item_price-per-one {
+						margin-right: 10px;
+						color: $rose400;
+					}
+					.cart-item_price-per-quantity {
+						color: $rose400;
+						font-weight: 600;
+					}
+				}
+			}
+			.cart-item_remover {
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				top: 10px;
+				right: 0px;
+				background-color: transparent;
+				border: none;
+				outline: none;
+				border-radius: 50%;
+				border: 2px solid $rose300;
+				padding: 2px;
+				cursor: pointer;
+			}
+		}
+		.total-amount {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			span {
+				display: block;
+				&:first-child {
+					color: $rose900;
+					font-weight: 600;
+				}
+				&:last-child {
+					color: $rose900;
+					font-size: 25px;
+					font-weight: 800;
+				}
+			}
+		}
+		.carbon-message {
+			background-color: $rose100;
+			margin-top: 30px;
+			padding: 10px;
+			height: 50px;
+			line-height: 2;
+			border-radius: 10px;
+			color: $rose900;
+			opacity: 0.9;
+			img {
+				vertical-align: text-top;
+			}
+		}
+		.confirm-order {
+			width: 100%;
+			height: 50px;
+			border-radius: 30px;
+			background-color: $red;
+			outline: none;
+			border: none;
+			font-size: 16px;
+			color: #f2f2f2;
+			margin-top: 30px;
+			letter-spacing: 1px;
+			cursor: pointer;
+			transition: background-color .2 linear;
+			&:hover {
+				background-color: hsl(14deg 91.61% 27.04%);
+			}
+		}
+	}
+}
+@media only screen and (min-width:"992px") {
+	.cart {
+  width: 30%;
+	text-align: center;
+  }
+}

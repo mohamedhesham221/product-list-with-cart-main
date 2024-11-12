@@ -1,0 +1,29 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+@import "./vars";
+@import "./desserts";
+@import "./dessertItem/dessertItem";
+@import "./dessertItem/addToCart";
+@import "./cart/cart";
+@import "./cart/orderConfirmed";
+
+body {
+  background-color: $rose50;
+}
+.App {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 25px;
+  font-family: $fontFamily;
+  gap: 15px;
+}
+@media only screen and (min-width:"992px") {
+	.App {
+  flex-wrap: nowrap;
+  padding: 25px 70px;
+  }
+}

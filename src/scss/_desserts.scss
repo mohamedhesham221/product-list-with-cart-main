@@ -1,0 +1,19 @@
+.desserts {
+	width: 100%;
+	height: max-content;
+  h1 {
+    font-family: $fontFamily;
+		margin-bottom: 15px;
+  }
+	.desserts-menu {
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+}
+@media only screen and (min-width:"992px") {
+	.desserts {
+		width: 70%;
+	}
+}

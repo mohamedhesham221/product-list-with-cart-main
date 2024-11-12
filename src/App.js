@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Dessert from "./component/dessertMenu/Dessert";
+import Cart from "./component/cart/Cart";
+import { myContext } from "./context/myContext";
 
+//App component
 function App() {
+  const [cartItems, setCartItems] = useState([])
+  const [deletedItem, setDeletedItem] = useState("")
+
+//Component Logic ...
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <myContext.Provider value={{cartItems, setCartItems,deletedItem, setDeletedItem}}>
+      <section className="desserts">
+        <h1>Desserts</h1>
+        <Dessert />
+      </section>
+      <aside className="cart">
+        <Cart />
+      </aside>
+      </myContext.Provider> 
     </div>
   );
 }
